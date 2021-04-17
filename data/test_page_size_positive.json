@@ -1,5 +1,11 @@
 [
     {
+        "title":"Проверка значения по умолчанию",
+        "value":"Default",
+        "expected_value":15
+    },
+    
+    {
         "title":"Проверка значения 5",
         "value":"5",
         "expected_value":5
