@@ -1,0 +1,16 @@
+version: '3'
+services:
+  test:
+    build: .
+    command: pytest --alluredir python-regions-api-testing/report
+    volumes:
+      - .:/code
+      - ./python-regions-api-testing/report:/code/python-regions-api-testing/report
+  allure:
+    image: "frankescobar/allure-docker-service"
+    environment:
+        CHECK_RESULTS_EVERY_SECONDS: 3
+    ports:
+        - "5050:5050"
+    volumes:
+        - ./python-regions-api-testing/report:/app/allure-results

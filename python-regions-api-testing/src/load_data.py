@@ -5,7 +5,7 @@ import json
 
 def load(filename):
     try:
-        f = open(f"data/{filename}","r")
+        f = open(f"python-regions-api-testing/data/{filename}","r")
     except OSError:
         print(f"Невозможно открыть файл:{filename}")
         sys.exit()
