@@ -16,3 +16,13 @@ class TestCountryCode:
         for regions in response["items"]:
             with allure.step(f'Проверка кода региона: {regions["country"]["code"]}'):
                 assert regions["country"]["code"] in data["expected_value"]
+
+    @allure.feature("Тестирование параметра country_code")
+    @allure.story("Негативный кейсы")
+    @pytest.mark.parametrize("data", [x for x in load("test_country_code_negative.json")])
+    def test_negative(self, regions_api, data):
+        allure.dynamic.title(data["title"])
+        response = regions_api.get(params={"country_code":data["value"]})
+        response = response.json()
+        with allure.step(f'Проверка возвращаемой ошибки: {response["error"]["message"]}'):
+            assert response["error"]["message"] in data["expected_value"]
