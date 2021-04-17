@@ -1,0 +1,19 @@
+[
+    {
+        "title":"Проверка значения 5",
+        "value":"5",
+        "expected_value":5
+    },
+
+    {
+        "title":"Проверка значения 10",
+        "value":"10",
+        "expected_value":10
+    },
+
+    {
+        "title":"Проверка значения 15",
+        "value":"15",
+        "expected_value":15
+    }
+]
