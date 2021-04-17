@@ -11,10 +11,10 @@ class TestCountryCode:
     @pytest.mark.parametrize("data", [x for x in load("test_country_code_positive.json")])
     def test_positive(self, regions_api, data):
         allure.dynamic.title(data["title"])
-        if data["value"] == "Default":
+        if data["country_code"] == "Default":
             response = regions_api.get()
         else:
-            response = regions_api.get(params={"country_code":data["value"]})
+            response = regions_api.get(params={"country_code":data["country_code"]})
         response = response.json()
         for regions in response["items"]:
             with allure.step(f'Проверка кода региона: {regions["country"]["code"]}'):
@@ -25,7 +25,7 @@ class TestCountryCode:
     @pytest.mark.parametrize("data", [x for x in load("test_country_code_negative.json")])
     def test_negative(self, regions_api, data):
         allure.dynamic.title(data["title"])
-        response = regions_api.get(params={"country_code":data["value"]})
+        response = regions_api.get(params={"country_code":data["country_code"]})
         response = response.json()
         with allure.step(f'Проверка возвращаемой ошибки: {response["error"]["message"]}'):
             assert response["error"]["message"] in data["expected_value"]

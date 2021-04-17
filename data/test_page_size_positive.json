@@ -1,25 +1,25 @@
 [
     {
         "title":"Проверка значения по умолчанию",
-        "value":"Default",
+        "page_size":"Default",
         "expected_value":15
     },
     
     {
         "title":"Проверка значения 5",
-        "value":"5",
+        "page_size":"5",
         "expected_value":5
     },
 
     {
         "title":"Проверка значения 10",
-        "value":"10",
+        "page_size":"10",
         "expected_value":10
     },
 
     {
         "title":"Проверка значения 15",
-        "value":"15",
+        "page_size":"15",
         "expected_value":15
     }
 ]

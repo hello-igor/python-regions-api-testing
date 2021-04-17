@@ -1,13 +1,13 @@
 [
     {
         "title":"Проверка кода не из допустимого списка",
-        "value":"en",
+        "country_code":"en",
         "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
     },
 
     {
         "title":"Проверка пустого значения",
-        "value":"",
+        "country_code":"",
         "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
     }
 ]

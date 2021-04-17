@@ -1,31 +1,31 @@
 [
     {
         "title":"Проверка значения по умолчанию",
-        "value":"Default",
+        "country_code":"Default",
         "expected_value":["ru", "kg", "kz", "cz"]
     },
     
     {
         "title":"Проверка кода 'ru'",
-        "value":"ru",
+        "country_code":"ru",
         "expected_value":"ru"
     },
 
     {
         "title":"Проверка кода 'kg'",
-        "value":"kg",
+        "country_code":"kg",
         "expected_value":"kg"
     },
 
     {
         "title":"Проверка кода 'kz'",
-        "value":"kz",
+        "country_code":"kz",
         "expected_value":"kz"
     },
 
     {
         "title":"Проверка кода 'cz'",
-        "value":"cz",
+        "country_code":"cz",
         "expected_value":"cz"
     }
 ]
