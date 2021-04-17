@@ -11,7 +11,10 @@ class TestCountryCode:
     @pytest.mark.parametrize("data", [x for x in load("test_country_code_positive.json")])
     def test_positive(self, regions_api, data):
         allure.dynamic.title(data["title"])
-        response = regions_api.get(params={"country_code":data["value"]})
+        if data["value"] == "Default":
+            response = regions_api.get()
+        else:
+            response = regions_api.get(params={"country_code":data["value"]})
         response = response.json()
         for regions in response["items"]:
             with allure.step(f'Проверка кода региона: {regions["country"]["code"]}'):
