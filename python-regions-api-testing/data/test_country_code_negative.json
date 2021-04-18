@@ -1,13 +1,37 @@
 [
     {
         "title":"Проверка кода не из допустимого списка",
-        "country_code":"en",
+        "country_code":"ua",
+        "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
+    },
+
+    {
+        "title":"Проверка кода в верхнем регистре",
+        "country_code":"RU",
+        "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
+    },
+
+    {
+        "title":"Проверка кода в смешанном регистре",
+        "country_code":"Ru",
         "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
     },
 
     {
         "title":"Проверка пустого значения",
         "country_code":"",
+        "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
+    },
+
+    {
+        "title":"Проверка значения 0",
+        "country_code":"0",
+        "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
+    },
+
+    {
+        "title":"Проверка значения в виде спецсимволов",
+        "country_code":"*.",
         "expected_value":"Параметр 'country_code' может быть одним из следующих значений: ru, kg, kz, cz"
     }
 ]
