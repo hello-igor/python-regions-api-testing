@@ -1,0 +1,21 @@
+[
+
+    {
+        "title":"Проверка параметров q и country_code",
+        "q":"Нов",
+        "country_code":"cz",
+        "page":"Default",
+        "page_size":"Default",
+        "expected_value":["Нижний Новгород", "Новосибирск"]
+    },
+
+    {
+        "title":"Проверка параметров page и page_size",
+        "q":"Default",
+        "country_code":"Default",
+        "page":1,
+        "page_size":5,
+        "expected_value":["Актау", "Актобе", "Алматы", "Бишкек", "Владикавказ"]
+    }
+
+]
